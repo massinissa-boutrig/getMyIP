@@ -1,4 +1,4 @@
-__author__ = 'chaoswow'
+__author__ = 'massinissa'
 
 import ipgetter
 
