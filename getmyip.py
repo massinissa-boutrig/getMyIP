@@ -33,8 +33,8 @@ class IPman:
             print("Erreur de type Input/Output dans la methode writeMyFile")
 
     def sendMail(self, newIP):
-        fromaddr = "raspberrypython3@gmail.com"
-        toaddr = "raspberrypython3@gmail.com"
+        fromaddr = "EMAIL OF EXPEDITOR"
+        toaddr = "DESTINATION EMAIL"
         msg = MIMEMultipart()
         msg['From'] = fromaddr
         msg['To'] = toaddr
@@ -46,7 +46,7 @@ class IPman:
 
         server = smtplib.SMTP('smtp.gmail.com', 587)
         server.starttls()
-        server.login(fromaddr, "Raspipython3")
+        server.login(fromaddr, "YOUR PASSWORD")
         text = msg.as_string()
         try:
             server.sendmail(fromaddr, toaddr, text)
@@ -68,7 +68,7 @@ if r != webIp:
     print("There are diff !  /!\\")
     IPman().sendMail(webIp)
     IPman().writeMyFile(IPman.MYIP, webIp)
-print(type(r))
+#print(type(r))
 
 
 
